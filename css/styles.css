@@ -485,8 +485,6 @@ img {
     opacity: 0;
 }
 
-.modal-uncheck {}
-
 .modal-check {
     opacity: 0;
     transition-property: opacity;
