@@ -372,6 +372,11 @@ img {
     cursor: pointer;
 }
 
+.modal-btn:hover,
+.modal-btn:focus {
+    fill: var(--accent-color);
+}
+
 .modal-form {
     text-align: center;
 }
@@ -395,29 +400,6 @@ img {
     margin-bottom: 10px;
 }
 
-/* .modal-for-icon:hover,
-.modal-for-icon:focus {
-    fill: var(--accent-color);
-} */
-
-.modal-for-icon:placeholder-shown {
-    fill: #212121;
-}
-
-.modal-for-icon:not(:placeholder-shown) {
-    fill: var(--accent-color);
-}
-
-.modal-for-input:placeholder-shown {
-    border-color: rgba(33, 33, 33, 0.2);
-}
-
-.modal-for-input:hover+.modal-for-label,
-.modal-for-input:not(:placeholder-shown) {
-    border-color: var(--accent-color);
-
-}
-
 .modal-for-span {
     display: flex;
     text-align: left;
@@ -432,6 +414,10 @@ img {
     color: #757575;
 }
 
+.modal-span {
+    position: relative;
+}
+
 .modal-for-input {
     min-width: 448px;
     min-height: 40px;
@@ -442,8 +428,9 @@ img {
 
 .modal-for-icon {
     position: absolute;
-    top: 30px;
+    top: 50%;
     left: 12px;
+    transform: translateY(-50%);
 }
 
 .modal-for-texterea {
@@ -452,6 +439,25 @@ img {
     min-width: 448px;
     min-height: 120px;
     padding: 12px 16px;
+}
+
+.modal-for-icon:placeholder-shown {
+    fill: #212121;
+}
+
+.modal-for-input:focus+.modal-for-icon,
+.modal-for-input:hover+.modal-for-icon {
+    fill: var(--accent-color);
+}
+
+.modal-for-input:placeholder-shown {
+    border-color: rgba(33, 33, 33, 0.2);
+}
+
+.modal-for-input:hover+.modal-for-label,
+.modal-for-input:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+
 }
 
 .modal-for-texterea:focus+.modal-for-label,
@@ -949,6 +955,11 @@ img {
     margin-left: 12px;
     min-height: 50px;
     min-width: 200px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
     color: #FFFFFF;
     border-radius: 4px;
     border: 0;
@@ -956,10 +967,8 @@ img {
 }
 
 .footer-btn-icon {
-    position: absolute;
     fill: #FFFFFF;
-    right: 28px;
-    bottom: 13px;
+    margin-left: 10px;
 }
 
 /* portfolio.html */
